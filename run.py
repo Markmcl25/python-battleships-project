@@ -1,3 +1,16 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from random import randint
+
+scores = {"computer": 0, "player": 0}
+
+class Board:
+    """
+    Main board class. Sets size, number of ships, players name and board type (player or computer)
+    Can add ships and guesses aswell as print board
+    """
+
+    def __init__(self, size, num_ships, name, type):
+        self.size = size
+        self.num_ships = num_ships
+        self.type = type
+        self.name = name
+        self.grid = [['O' for _ in range(size)] for _ in range(size)]
