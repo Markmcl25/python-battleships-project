@@ -25,8 +25,8 @@ class Board:
         self.type = type
         self.name = name
         self.board = [['.' for x in range(size)] for y in range(size)]
-        self.guesses = []
-        self.ships = []
+        self.guesses = [] # List to store the guesses made by the player
+        self.ships = [] # List to store the guesses made by the player
 
         def place_ships(self):
             """
@@ -35,3 +35,12 @@ class Board:
             for _ in range(self.num_ships):
                 ship_row = randint(0, self.size -1)
                 ship_col = randint(0, self.size -1)
+                # Append the position of the ship to the ships list
+                self.ships.append((ship_row, ship_col))
+                # Mark the ship position on the board
+                self.board[ship_row][ship_col] = 'X'
+
+         def is_off_grid(self, guess):
+
+
+        def new_game():
