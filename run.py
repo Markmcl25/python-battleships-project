@@ -13,4 +13,6 @@ class Board:
         self.num_ships = num_ships
         self.type = type
         self.name = name
-        self.grid = [['O' for _ in range(size)] for _ in range(size)]
+        self.board = [['O' for _ in range(size)] for _ in range(size)]
+        self.guesses = []
+        self.ships = []
